@@ -1,0 +1,35 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import com.jfoenix.controls.JFXButton?>
+<?import com.jfoenix.controls.JFXListView?>
+<?import com.jfoenix.controls.JFXTextField?>
+<?import javafx.geometry.Insets?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.HBox?>
+<?import javafx.scene.text.Font?>
+
+<AnchorPane prefHeight="450.0" prefWidth="300.0" stylesheets="@pizza.css" xmlns="http://javafx.com/javafx/10.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="view.AdicionarProdutoController">
+   <children>
+      <JFXTextField focusColor="#239d3b" labelFloat="true" layoutX="35.0" layoutY="26.0" prefHeight="36.0" prefWidth="227.0" promptText="Informe o nome do produto" AnchorPane.leftAnchor="35.0" AnchorPane.rightAnchor="38.0" />
+      <HBox alignment="CENTER" layoutX="16.0" layoutY="301.0" prefHeight="49.0" prefWidth="517.0" AnchorPane.bottomAnchor="10.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0">
+         <opaqueInsets>
+            <Insets />
+         </opaqueInsets>
+         <children>
+            <JFXButton prefHeight="49.0" prefWidth="100.0" ripplerFill="#239d3b" text="Salvar" />
+            <JFXButton prefHeight="50.0" prefWidth="100.0" ripplerFill="#e14132" text="Cancelar" />
+         </children>
+      </HBox>
+      <JFXTextField focusColor="#239d3b" labelFloat="true" layoutX="34.0" layoutY="89.0" prefHeight="36.0" prefWidth="100.0" promptText="Insira o preço" AnchorPane.leftAnchor="34.0" AnchorPane.rightAnchor="166.0" />
+      <JFXButton layoutX="210.0" layoutY="94.0" ripplerFill="#239d3b" text="+" />
+      <JFXButton layoutX="245.0" layoutY="94.0" prefHeight="26.0" prefWidth="29.0" ripplerFill="#e14132" text="-" />
+      <Label layoutX="54.0" layoutY="146.0" text="Lista de ingredientes">
+         <font>
+            <Font name="System Bold" size="13.0" />
+         </font>
+      </Label>
+      <JFXListView layoutX="50.0" layoutY="172.0" prefHeight="163.0" prefWidth="280.0" AnchorPane.leftAnchor="10.0" AnchorPane.rightAnchor="10.0" />
+      <JFXButton layoutX="47.0" layoutY="342.0" prefHeight="36.0" prefWidth="204.0" ripplerFill="#239d3b" text="Adicionar ingrediente" />
+   </children>
+</AnchorPane>

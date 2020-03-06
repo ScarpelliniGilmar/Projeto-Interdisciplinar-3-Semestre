@@ -1,0 +1,186 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import com.jfoenix.controls.JFXDrawer?>
+<?import com.jfoenix.controls.JFXHamburger?>
+<?import com.jfoenix.controls.JFXTabPane?>
+<?import javafx.geometry.Insets?>
+<?import javafx.scene.control.Menu?>
+<?import javafx.scene.control.MenuBar?>
+<?import javafx.scene.control.MenuItem?>
+<?import javafx.scene.control.Tab?>
+<?import javafx.scene.control.TableColumn?>
+<?import javafx.scene.control.TableView?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.BorderPane?>
+<?import javafx.scene.layout.StackPane?>
+
+<StackPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="400.0" prefWidth="600.0" xmlns="http://javafx.com/javafx/10.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="view.MainFormController">
+   <children>
+      <AnchorPane fx:id="anchorPane" prefHeight="200.0" prefWidth="200.0" stylesheets="@pizza.css">
+         <children>
+            <BorderPane prefHeight="400.0" prefWidth="600.0" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0">
+               <center>
+                  <JFXTabPane fx:id="tabPane" prefHeight="400.0" prefWidth="595.0" BorderPane.alignment="CENTER">
+                     <tabs>
+                        <Tab fx:id="pedidos" text="Pedidos">
+                          <content>
+                            <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="180.0" prefWidth="200.0">
+                                 <children>
+                                    <TableView fx:id="tbPedido" layoutX="112.0" layoutY="59.0" prefHeight="368.0" prefWidth="450.0" tableMenuButtonVisible="true" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="150.0" AnchorPane.topAnchor="0.0">
+                                      <columns>
+                                        <TableColumn fx:id="codigoPedido" prefWidth="75.0" text="Código" />
+                                        <TableColumn fx:id="idCPedido" prefWidth="75.0" text="Cliente" />
+                                          <TableColumn fx:id="idProduto" prefWidth="75.0" text="Produto" />
+                                          <TableColumn fx:id="idFuPedido" prefWidth="75.0" text="Funcionario" />
+                                          <TableColumn fx:id="tamPedido" prefWidth="75.0" text="Tamanho" />
+                                          <TableColumn fx:id="qtdPedido" prefWidth="75.0" text="Quantidade" />
+                                          <TableColumn fx:id="formaPag" prefWidth="75.0" text="Pagamento" />
+                                          <TableColumn fx:id="dataPedido" prefWidth="75.0" text="Data" />
+                                          <TableColumn fx:id="anotacaoPe" prefWidth="75.0" text="Anotação" />
+                                          <TableColumn fx:id="trocoPe" prefWidth="75.0" text="Troco" />
+                                          <TableColumn fx:id="precoTotal" prefWidth="75.0" text="Total" />
+                                      </columns>
+                                       <columnResizePolicy>
+                                          <TableView fx:constant="CONSTRAINED_RESIZE_POLICY" />
+                                       </columnResizePolicy>
+                                    </TableView>
+                                    <JFXDrawer fx:id="drawerPe" defaultDrawerSize="150.0" layoutX="475.0" layoutY="-21.0" prefHeight="389.0" prefWidth="165.0" AnchorPane.bottomAnchor="0.0" AnchorPane.rightAnchor="-200.0" AnchorPane.topAnchor="-21.0" />
+                                    <JFXHamburger fx:id="hamPedido" AnchorPane.rightAnchor="10.0" AnchorPane.topAnchor="10.0" />
+                                 </children></AnchorPane>
+                          </content>
+                        </Tab>
+                        <Tab fx:id="cardapio" text="Cardápio">
+                          <content>
+                            <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="180.0" prefWidth="200.0">
+                                 <children>
+                                    <TableView fx:id="tbCardapio" layoutX="99.0" layoutY="64.0" prefHeight="368.0" prefWidth="450.0" tableMenuButtonVisible="true" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="150.0" AnchorPane.topAnchor="0.0">
+                                      <columns>
+                                        <TableColumn fx:id="codProduto" prefWidth="75.0" text="Código" />
+                                        <TableColumn fx:id="nomeProduto" prefWidth="75.0" text="Nome" />
+                                          <TableColumn fx:id="preco" prefWidth="75.0" text="Preço" />
+                                          <TableColumn fx:id="funcionarioProduto" prefWidth="75.0" text="Funcionario" />
+                                      </columns>
+                                       <columnResizePolicy>
+                                          <TableView fx:constant="CONSTRAINED_RESIZE_POLICY" />
+                                       </columnResizePolicy>
+                                    </TableView>
+                                    <JFXDrawer fx:id="drawerPr" defaultDrawerSize="150.0" layoutX="486.0" layoutY="167.0" prefHeight="368.0" prefWidth="166.0" AnchorPane.bottomAnchor="0.0" AnchorPane.rightAnchor="-200.0" AnchorPane.topAnchor="0.0" />
+                                    <JFXHamburger fx:id="hamProduto" AnchorPane.rightAnchor="10.0" AnchorPane.topAnchor="10.0" />
+                                 </children></AnchorPane>
+                          </content>
+                        </Tab>
+                        <Tab fx:id="estoque" text="Estoque">
+                          <content>
+                            <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="180.0" prefWidth="200.0">
+                                 <children>
+                                    <TableView fx:id="tbEstoque" layoutX="143.0" layoutY="55.0" prefHeight="368.0" prefWidth="450.0" tableMenuButtonVisible="true" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="150.0" AnchorPane.topAnchor="0.0">
+                                      <columns>
+                                        <TableColumn fx:id="idInsumo" prefWidth="75.0" text="Código" />
+                                        <TableColumn fx:id="descricao" prefWidth="200.0" text="Descrição" />
+                                          <TableColumn fx:id="precoInsumo" prefWidth="75.0" text="Preço" />
+                                          <TableColumn fx:id="unidadeMedida" prefWidth="75.0" text="U.M." />
+                                          <TableColumn fx:id="quantidadeDisp" prefWidth="75.0" text="Quantidade" />
+                                          <TableColumn fx:id="fornecedor" prefWidth="75.0" text="Fornecedor" />
+                                      </columns>
+                                       <columnResizePolicy>
+                                          <TableView fx:constant="CONSTRAINED_RESIZE_POLICY" />
+                                       </columnResizePolicy>
+                                    </TableView>
+                                    <JFXDrawer fx:id="drawerE" defaultDrawerSize="150.0" prefHeight="389.0" prefWidth="165.0" AnchorPane.bottomAnchor="0.0" AnchorPane.rightAnchor="-200.0" AnchorPane.topAnchor="0.0" />
+                                    <JFXHamburger fx:id="hamEstoque" AnchorPane.rightAnchor="10.0" AnchorPane.topAnchor="10.0" />
+                                 </children></AnchorPane>
+                          </content>
+                        </Tab>
+                        <Tab fx:id="fornecedores" text="Fornecedores">
+                          <content>
+                            <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="180.0" prefWidth="200.0">
+                                 <children>
+                                    <TableView fx:id="tbFornecedores" prefHeight="339.0" prefWidth="450.0" tableMenuButtonVisible="true" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="150.0" AnchorPane.topAnchor="0.0">
+                                      <columns>
+                                        <TableColumn fx:id="idFornecedor" prefWidth="75.0" text="Código" />
+                                          <TableColumn fx:id="cnpj" prefWidth="75.0" text="CNPJ" />
+                                        <TableColumn fx:id="razaoSocial" prefWidth="75.0" text="Razão social" />
+                                          <TableColumn fx:id="nomeSocial" prefWidth="75.0" text="Nome social" />
+                                          <TableColumn fx:id="emailFornecedor" prefWidth="75.0" text="E-mail" />
+                                          <TableColumn fx:id="tel1" prefWidth="75.0" text="Tel.1" />
+                                          <TableColumn fx:id="tel2" prefWidth="75.0" text="Tel.2" />
+                                      </columns>
+                                       <columnResizePolicy>
+                                          <TableView fx:constant="CONSTRAINED_RESIZE_POLICY" />
+                                       </columnResizePolicy>
+                                    </TableView>
+                                    <JFXDrawer fx:id="drawerF" defaultDrawerSize="150.0" prefHeight="389.0" prefWidth="165.0" AnchorPane.bottomAnchor="0.0" AnchorPane.rightAnchor="-200.0" AnchorPane.topAnchor="0.0" />
+                                    <JFXHamburger fx:id="hamFornecedor" AnchorPane.rightAnchor="10.0" AnchorPane.topAnchor="10.0" />
+                                 </children></AnchorPane>
+                          </content>
+                        </Tab>
+                        <Tab fx:id="clientes" text="Clientes">
+                          <content>
+                            <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="180.0" prefWidth="200.0">
+                                 <children>
+                                    <TableView fx:id="tbCliente" layoutX="58.0" layoutY="141.0" prefHeight="368.0" prefWidth="450.0" tableMenuButtonVisible="true" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="150.0" AnchorPane.topAnchor="0.0">
+                                      <columns>
+                                        <TableColumn fx:id="idCliente" prefWidth="75.0" text="ID" />
+                                        <TableColumn fx:id="nomeCliente" prefWidth="75.0" text="Nome" />
+                                          <TableColumn fx:id="celularCliente" prefWidth="75.0" text="Celular" />
+                                          <TableColumn fx:id="emailCliente" prefWidth="75.0" text="E-mail" />
+                                          <TableColumn fx:id="telefoneCliente" prefWidth="75.0" text="Telefone" />
+                                          <TableColumn fx:id="dataNascCliente" prefWidth="75.0" text="Nascimento" />
+                                      </columns>
+                                       <columnResizePolicy>
+                                          <TableView fx:constant="CONSTRAINED_RESIZE_POLICY" />
+                                       </columnResizePolicy>
+                                    </TableView>
+                                    <JFXDrawer fx:id="drawerC" defaultDrawerSize="150.0" prefHeight="389.0" prefWidth="165.0" AnchorPane.bottomAnchor="0.0" AnchorPane.rightAnchor="-200.0" AnchorPane.topAnchor="0.0" />
+                                    <JFXHamburger fx:id="hamCliente" AnchorPane.rightAnchor="10.0" AnchorPane.topAnchor="10.0" />
+                                 </children></AnchorPane>
+                          </content>
+                        </Tab>
+                        <Tab fx:id="funcionarios" text="Funcionarios">
+                          <content>
+                            <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="180.0" prefWidth="200.0">
+                                 <children>
+                                    <TableView fx:id="tbFuncionarios" layoutX="155.0" layoutY="34.0" prefHeight="368.0" prefWidth="450.0" tableMenuButtonVisible="true" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="150.0" AnchorPane.topAnchor="0.0">
+                                      <columns>
+                                        <TableColumn fx:id="id" prefWidth="75.0" text="Código" />
+                                        <TableColumn fx:id="nome" prefWidth="75.0" text="Nome" />
+                                          <TableColumn fx:id="cpf" prefWidth="75.0" text="CPF" />
+                                          <TableColumn fx:id="nivelAcesso" prefWidth="75.0" text="Acesso" />
+                                          <TableColumn fx:id="senha" prefWidth="75.0" text="Senha" />
+                                      </columns>
+                                       <columnResizePolicy>
+                                          <TableView fx:constant="CONSTRAINED_RESIZE_POLICY" />
+                                       </columnResizePolicy>
+                                    </TableView>
+                                    <JFXDrawer fx:id="drawerFu" defaultDrawerSize="150.0" prefHeight="389.0" prefWidth="165.0" AnchorPane.bottomAnchor="0.0" AnchorPane.rightAnchor="-200.0" AnchorPane.topAnchor="0.0" />
+                                    <JFXHamburger fx:id="hamFuncionario" AnchorPane.rightAnchor="10.0" AnchorPane.topAnchor="10.0" />
+                                 </children></AnchorPane>
+                          </content>
+                        </Tab>
+                     </tabs>
+                     <BorderPane.margin>
+                        <Insets />
+                     </BorderPane.margin>
+                  </JFXTabPane>
+               </center>
+               <top>
+                  <MenuBar BorderPane.alignment="CENTER">
+                    <menus>
+                      <Menu mnemonicParsing="false" text="Sistema">
+                        <items>
+                          <MenuItem mnemonicParsing="false" onAction="#closeWindow" text="Sair" />
+                        </items>
+                      </Menu>
+                      <Menu mnemonicParsing="false" text="Ajuda">
+                        <items>
+                          <MenuItem mnemonicParsing="false" text="About" />
+                        </items>
+                      </Menu>
+                    </menus>
+                  </MenuBar>
+               </top>
+            </BorderPane>
+         </children>
+      </AnchorPane>
+   </children>
+</StackPane>

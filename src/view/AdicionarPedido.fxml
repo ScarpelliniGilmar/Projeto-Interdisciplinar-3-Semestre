@@ -1,0 +1,52 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import com.jfoenix.controls.JFXButton?>
+<?import com.jfoenix.controls.JFXComboBox?>
+<?import com.jfoenix.controls.JFXTextArea?>
+<?import com.jfoenix.controls.JFXTextField?>
+<?import javafx.geometry.Insets?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.HBox?>
+<?import javafx.scene.layout.StackPane?>
+
+<StackPane fx:id="mainContainer" xmlns="http://javafx.com/javafx/10.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="view.AdicionarPedidosController">
+   <children>
+      <AnchorPane prefHeight="400.0" prefWidth="450.0" stylesheets="@pizza.css">
+         <children>
+            <JFXComboBox fx:id="cbPagamento" focusColor="#239d3b" labelFloat="true" layoutX="34.0" layoutY="62.0" prefHeight="26.0" prefWidth="162.0" promptText="Forma de pagamento" />
+            <JFXComboBox fx:id="cbCardapio" focusColor="#239d3b" labelFloat="true" layoutX="34.0" layoutY="101.0" prefHeight="26.0" prefWidth="220.0" promptText="Selecione o Item do cardápio" />
+            <Label layoutX="34.0" layoutY="141.0" text="Informe a quantidade" />
+            <Label fx:id="lbQuantidade" layoutX="34.0" layoutY="169.0" text="0" />
+            <JFXButton fx:id="btMais" layoutX="59.0" layoutY="160.0" text="+" />
+            <JFXButton fx:id="btMenos" layoutX="94.0" layoutY="160.0" prefHeight="26.0" prefWidth="29.0" text="-" />
+            <JFXComboBox fx:id="cbTamanho" focusColor="#239d3b" labelFloat="true" layoutX="34.0" layoutY="208.0" prefHeight="26.0" prefWidth="220.0" promptText="Informe o tamanho da pizza" />
+            <JFXTextArea fx:id="taAnotacao" focusColor="#239d3b" labelFloat="true" layoutX="279.0" layoutY="30.0" prefHeight="222.0" prefWidth="286.0" />
+            <Label layoutX="283.0" layoutY="14.0" text="Anotações" />
+            <HBox alignment="CENTER" layoutX="25.0" layoutY="344.0" prefHeight="49.0" prefWidth="517.0" AnchorPane.bottomAnchor="0.0">
+               <opaqueInsets>
+                  <Insets />
+               </opaqueInsets>
+               <children>
+                  <JFXButton fx:id="btSalvar" prefHeight="49.0" prefWidth="100.0" text="Salvar" />
+                  <JFXButton fx:id="btCancelar" prefHeight="50.0" prefWidth="100.0" text="Cancelar" />
+                  <Label text="Total: R$" />
+                  <Label fx:id="lbTotal">
+                     <HBox.margin>
+                        <Insets />
+                     </HBox.margin>
+                  </Label>
+               </children>
+            </HBox>
+            <JFXTextField fx:id="tfTroco" labelFloat="true" layoutX="32.0" layoutY="245.0" prefHeight="33.0" prefWidth="175.0" promptText="Informe o troco">
+               <padding>
+                  <Insets left="10.0" right="10.0" top="20.0" />
+               </padding>
+            </JFXTextField>
+            <JFXComboBox fx:id="cbCliente" focusColor="#239d3b" layoutX="34.0" layoutY="17.0" prefHeight="26.0" prefWidth="220.0" promptText="Selecione o código do cliente" />
+            <Label layoutX="39.0" layoutY="305.0" text="Código do pedido:" />
+            <Label fx:id="lblCodigoPedido" layoutX="175.0" layoutY="305.0" />
+         </children>
+      </AnchorPane>
+   </children>
+</StackPane>

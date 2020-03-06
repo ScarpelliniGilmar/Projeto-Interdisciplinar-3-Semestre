@@ -1,0 +1,74 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import com.jfoenix.controls.JFXButton?>
+<?import com.jfoenix.controls.JFXComboBox?>
+<?import com.jfoenix.controls.JFXDatePicker?>
+<?import com.jfoenix.controls.JFXTextField?>
+<?import javafx.geometry.Insets?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.HBox?>
+<?import javafx.scene.layout.StackPane?>
+<?import javafx.scene.text.Font?>
+
+<StackPane fx:id="root" xmlns="http://javafx.com/javafx/10.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="view.AdicionarClienteController">
+   <children>
+      <AnchorPane prefHeight="400.0" prefWidth="360.0" stylesheets="@pizza.css">
+         <children>
+            <JFXTextField fx:id="tfNome" focusColor="#239d3b" labelFloat="true" layoutX="37.0" layoutY="21.0" prefHeight="36.0" prefWidth="227.0" promptText="Insira o nome" AnchorPane.leftAnchor="37.0" AnchorPane.rightAnchor="36.0" AnchorPane.topAnchor="21.0">
+               <padding>
+                  <Insets left="10.0" right="10.0" top="20.0" />
+               </padding>
+            </JFXTextField>
+            <HBox alignment="CENTER" layoutX="16.0" layoutY="301.0" prefHeight="49.0" prefWidth="517.0" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0">
+               <opaqueInsets>
+                  <Insets />
+               </opaqueInsets>
+               <children>
+                  <JFXButton fx:id="btSalvar" prefHeight="49.0" prefWidth="100.0" ripplerFill="#239d3b" text="Salvar" />
+                  <JFXButton fx:id="btCancelar" prefHeight="50.0" prefWidth="100.0" ripplerFill="#e14132" text="Cancelar" />
+               </children>
+            </HBox>
+            <JFXTextField fx:id="tfTelefone" focusColor="#239d3b" labelFloat="true" layoutX="37.0" layoutY="157.0" prefHeight="32.0" prefWidth="287.0" promptText="Insira o telefone" AnchorPane.leftAnchor="37.0" AnchorPane.rightAnchor="36.0">
+               <padding>
+                  <Insets left="10.0" right="10.0" top="20.0" />
+               </padding>
+            </JFXTextField>
+            <JFXTextField fx:id="tfCelular" focusColor="#239d3b" labelFloat="true" layoutX="37.0" layoutY="66.0" prefHeight="36.0" prefWidth="227.0" promptText="Informe o celular" AnchorPane.leftAnchor="37.0" AnchorPane.rightAnchor="36.0">
+               <padding>
+                  <Insets left="10.0" right="10.0" top="20.0" />
+               </padding>
+            </JFXTextField>
+            <JFXTextField fx:id="tfEmail" focusColor="#239d3b" labelFloat="true" layoutX="37.0" layoutY="112.0" prefHeight="36.0" prefWidth="227.0" promptText="Insira o e-mail" AnchorPane.leftAnchor="37.0" AnchorPane.rightAnchor="36.0">
+               <padding>
+                  <Insets left="10.0" right="10.0" top="20.0" />
+               </padding>
+            </JFXTextField>
+            <JFXDatePicker fx:id="dpData" defaultColor="#239d3b" layoutX="54.0" layoutY="215.0" />
+            <Label layoutX="54.0" layoutY="199.0" text="Selecione a data de nascimento">
+               <font>
+                  <Font name="System Bold" size="13.0" />
+               </font>
+            </Label>
+            <JFXComboBox fx:id="cbEndereco" focusColor="#239d3b" layoutX="52.0" layoutY="276.0" promptText="Endereços adicionados" />
+            <Label layoutX="54.0" layoutY="253.0" text="Endereços">
+               <font>
+                  <Font name="System Bold" size="13.0" />
+               </font>
+            </Label>
+            <HBox layoutY="285.0" prefHeight="36.0" prefWidth="200.0" AnchorPane.bottomAnchor="49.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0">
+               <children>
+                  <JFXButton fx:id="btAdicionarEndereco" prefHeight="50.0" prefWidth="200.0" ripplerFill="#239d3b" text="Adicionar endereço" />
+                  <JFXButton fx:id="btAlterarEndereco" prefHeight="50.0" prefWidth="200.0" ripplerFill="#e14132" text="Alterar endereço">
+                     <font>
+                        <Font size="10.0" />
+                     </font>
+                  </JFXButton>
+               </children>
+            </HBox>
+            <Label layoutX="54.0" layoutY="14.0" text="Código do cliente:" AnchorPane.topAnchor="5.0" />
+            <Label fx:id="lblCodigoCliente" layoutX="190.0" layoutY="32.0" AnchorPane.topAnchor="5.0" />
+         </children>
+      </AnchorPane>
+   </children>
+</StackPane>
